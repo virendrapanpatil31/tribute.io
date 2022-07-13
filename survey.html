@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <style media="screen">
+    body{
+      background-color: green;
+      font-family: Verdana;
+      text-align:center;
+    }
+    form{
+      max-width: 500px;
+      background-color: #fff;
+      margin: 50px auto;
+      padding: 30px 20px;
+      box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    }
+
+    .form-control{
+      text-align: left;
+      margin-bottom: 25px;
+    }
+    .form-control label{
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-control input,
+    .form-control select,
+    .form-control textarea{
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"]{
+      display: inline-block;
+      width: auto;
+    }
+
+    button{
+      width: 100%;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      font-size: 21px;
+      display: block;
+      background-color: #05c46b;
+      margin-top: : 50px;
+      margin-bottom: 20px;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Page</title>
+  </head>
+  <body>
+    <h1>VP Financial Service Survey</h1>
+    <form id="form" action="success.html" method="post">
+      <div class="form-control">
+        <label for="name">Name</label>
+        <input type="text" name="Name" placeholder="Enter name here...">
+      </div>
+
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" name="" placeholder="Enter email here...">
+      </div>
+
+      <div class="form-control">
+        <label for="age">Age</label>
+        <input type="text" name="" placeholder="Enter age here...">
+      </div>
+
+      <div class="form-control">
+        <label for="desciption">Which option best descibes you?</label>
+        <select id="description" name="disription" size="1">
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="business">Business</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="que">Would you recommend Vp Financial Service to a friend?</label>
+
+        <label for="yes">
+          <input type="radio" name="friend" value="yes">Yes</input>
+        </label>
+        
+        <label for="no">
+          <input type="radio" name="friend" value="no">No</input>
+        </label>
+
+        <label for="maybe">
+          <input type="radio" name="friend" value="maybe">Maybe</input>
+        </label>
+
+      </div>
+
+      <div class="form-control">
+        <label for="language">Language and Frameworks known</label>
+
+        <label for="inp-1"><input type="checkbox" name="inp" value="C">C</input></label>
+
+        <label for="inp-2"><input type="checkbox" name="inp" value="C++">C++</input></label>
+
+        <label for="inp-3"><input type="checkbox" name="inp" value="C#">C#</input></label>
+
+        <label for="inp-4"><input type="checkbox" name="inp" value="Java">Java</input></label>
+
+        <label for="inp-5"><input type="checkbox" name="inp" value="Python">Python</input></label>
+
+        <label for="inp-6"><input type="checkbox" name="inp" value="Javascript">Javascript</input></label>
+
+        <label for="inp-7"><input type="checkbox" name="inp" value="HtmlCss">Html & Css</input></label>
+
+        <label for="inp-8"><input type="checkbox" name="inp" value="React">ReactJs</input></label>
+
+        <label for="inp-9"><input type="checkbox" name="inp" value="Angular">Angular</input></label>
+
+        <label for="inp-10"><input type="checkbox" name="inp" value="NodeJs">NodeJs</input></label>
+
+      </div>
+
+      <div class="form-control">
+        <label for="">Any Comments or Suggestion</label>
+        <input type="textarea" name="" value="">
+      </div>
+
+
+      <button type="button" name="submit">Submit</button>
+    </form>
+  </body>
+</html>
