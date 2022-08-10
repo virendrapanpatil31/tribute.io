@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      *{
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .container{
+        height: 100vh;
+        width: 100%;
+        background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/20210402235143/background.jpg");
+
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .nav li{
+        float: right;
+        list-style: none;
+      }
+
+      .nav a{
+        list-style: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1rem;
+        font-weight: 550;
+        display:block;
+        padding: 5px 35px;
+        color: black;
+        text-decoration: none;
+      }
+
+      .content{
+        width: 100%;
+        position: absolute;
+        top:45%;
+      }
+      .left-col{
+        margin-left: 11%;
+      }
+      .left-col h1{
+        font-size: 50px;
+        color: crimson;
+      }
+
+      .right-col{
+        float: right;
+        margin-right: 10%;
+        margin-top: -5%;
+        display: flex;
+        align-items: center;
+      }
+
+      .right-col p{
+        font-size: 21px;
+        color: black;
+        font-weight: 650;
+        margin-right: 20px;
+      }
+
+      .right-col img{
+        height: 25px;
+        width: 25px;
+        border-radius: 50% ;
+      }
+      #icon{
+        cursor: pointer;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title> Music Web Page </title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Artists</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left-col">
+        <h1>My <br> Sounds</h1>
+      </div>
+      <div class="right-col">
+        <p>click here to Listen </p>
+        <img src="play.png" id="icon">
+      </div>
+    </div>
+    <audio id="mysound">
+      <source src="song.mp3" type="audio/mp3">
+    </audio>
+    <script type="text/javascript">
+
+      var mysound = document.getElementById("mysound");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function(){
+        if(mysound.paused){
+          mysound.play();
+          icon.src = "paused.png";
+        }else{
+          mysound.pause();
+          icon.src = "play.png";
+        }
+      }
+    </script>
+  </body>
+</html>
