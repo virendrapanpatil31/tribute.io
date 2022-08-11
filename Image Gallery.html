@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="ImageStyle.css">
+  </head>
+  <body>
+    <h1>Welcome to DotNet Certification Courses</h1>
+    <h6>Live Workshop and Online Courses!</h6>
+
+    <div class="myproduct">
+      <div class="myProduct-gallery">
+        <img src="csharp.png" alt="click here" onclick="myImageFunction(this)">
+        <img src="live.png" alt="click here" onclick="myImageFunction(this)">
+        <img src="sys.png" alt="click here" onclick="myImageFunction(this)">
+        <img src="placements.png" alt="click here" onclick="myImageFunction(this)">
+
+      </div>
+      <div class="image-container">
+        <img id="img-box" src="csharp.png" alt="click here">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        function myImageFunction(productSmallImg){
+          var productFullImg = document.getElementById("img-box");
+          productFullImg.src = productSmallImg.src;
+        }
+    </script>
+  </body>
+</html>
